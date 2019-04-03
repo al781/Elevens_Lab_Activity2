@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.ArrayList;
 
 public class Deck {
@@ -7,7 +6,7 @@ public class Deck {
 	private int size;
 
 	public Deck(String[] ranks, String[] suits, int[] values) {
-		cards = new ArrayList<Card>;
+		cards = new ArrayList<Card>();
 		for(int i = 0; i < ranks.length; i++)
 			{
 				for (int j = 0; j < suits.length; j++)
@@ -37,8 +36,11 @@ public class Deck {
 	}
 
 	public Card deal() {
-		if(!cards.isEmpty())
-			cards.remove(0);
+		if(!cards.isEmpty()) {
+			cards.add(cards.remove(0));
+			return cards.get(cards.size() - 1);
+		}else
+			return null;
 	}
 
 	@Override
