@@ -5,7 +5,6 @@ public class Card {
 	private int pointValue;
 
 	public Card(String cardRank, String cardSuit, int cardPointValue) {
-		//initializes a new Card with the given rank, suit, and point value
 		rank = cardRank;
 		suit = cardSuit;
 		pointValue = cardPointValue;
